@@ -1,36 +1,50 @@
-
-
 :root {
     /*variaveis global*/
     --primary-color: #228B22;
+    --light-gray-color: #D3D3D3;
+    --secundary-color: #b5b35c;
+    --soft-beige-color: #F5F5DC;
     --white-color: #fff;
-    --gap: 3rem;            /*espaçamento entre cada elemento e não no container */
-    --gray-color: #D3D3D3;
+    --gap: 3rem;
+    /*espaçamento entre cada elemento e não no container */
+
 }
 
 
-* {                         /*seletor geral*/    
+* {
+    /*seletor geral*/
     margin: 0;
     padding: 0;
 }
 
 html {
-    font-size: 62.5%;  
-/* define uma espécie de “unidade base” que equivale a aproximadamente 10px. Possibilita trabalhar com números inteiros. Por exemplo:
+    font-size: 62.5%;
+    /* define uma espécie de “unidade base” que equivale a aproximadamente 10px. Possibilita trabalhar com números inteiros. Por exemplo:
     font-size: 1em;seria equivalente a 10px
     font-size: 1.5em; seria equivalente a 15px
     font-size: 2rem; seria equivalente a 20px 
 */
+    scroll-behavior: smooth;
+    /*rolar devagar na pagina*/
+
 }
 
 body {
     font-family: "Lato", sans-serif;
-    font-weight: 300;       /*Realça palavras de um texto*/
-    font-size: 2rem;      /*tamanho da fonte*/
-    color: var(--primary-color)
+    font-weight: 300;
+    /*Realça palavras de um texto*/
+    font-size: 2rem;
+    /*tamanho da fonte*/
+    color: var(--primary-color);
+    line-height: 1.2;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
 }
@@ -42,6 +56,7 @@ h1 {
 
 h2 {
     font-size: 5.5rem;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -64,24 +79,29 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin-bottom: 3rem;
+}
+
 .main-bg {
     /*classe para background*/
-    background-image: url('../img/sun-tornado.svg');
-    background-size: cover;
-    background-position: center center;
-    color: var(--white-color);      /*uso da variavel global*/
+    background: var(--primary-color);
+    color: var(--white-color);
+    /*uso da variavel global*/
 }
 
 .white-bg {
-    /*para fundo branco*/  
+    /*para fundo branco*/
     background: var(--white-color);
+    color: var(--primary-color);
 }
 
 .main-content {
     /*sustenta o conteudo*/
-max-width: 1200px;
-margin: 0 auto;
-padding: var(--gap);        /*espaçamento*/
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: var(--gap);
+    /*espaçamento*/
 }
 
 .section {
@@ -90,13 +110,13 @@ padding: var(--gap);        /*espaçamento*/
 
 
 .menu {
-    background: var(--white-color);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;    
-    border-bottom: 1px solid var(--gray-color);
+    width: 100%;
+    border-bottom: 0.1rem solid var(--light-gray-color);
+    z-index: 1;
 }
 
 .menu h1 {
@@ -105,39 +125,51 @@ padding: var(--gap);        /*espaçamento*/
     color: var(--primary-color)
 }
 
-.menu h1 a{
+.menu h1 a {
     color: inherit;
 }
 
 .menu ul {
     list-style: none;
     display: flex;
+
 }
 
-.menu ul li a{
-    display: block;    
+.menu ul li a {
+    display: block;
     padding: 2rem;
     font-size: 1.8rem;
-    position: relative;     /*Posiciona com base no elemento ao qual está inserido dentro*/
+    position: relative;
+    /*Posiciona com base no elemento ao qual está inserido dentro*/
+    color: var(--secundary-color);
 }
 
 .menu ul li a::after {
-content: '';
-position: absolute;     /*Posiciona elementos com base em um elemento referência*/
-bottom: 1rem;
-left: 50%;
-width: 0;
-height: 0.2rem;
-background-color: #228B22;
-transition: all 300ms ease-in-out;
+    /*usado para criar um elemento filho gerado após o conteúdo do elemento original */
+    content: '';
+    /* define o conteúdo do elemento gerado como vazio*/
+    position: absolute;
+    /*posiciona o elemento em relação ao seu elemento pai (o link) usando coordenadas absolutas.*/
+    bottom: 1rem;
+    left: 50%;
+    /*Alinha o elemento horizontalmente no centro do link.*/
+    width: 0;
+    /*Inicialmente, a largura do elemento é 0, portanto não é visível.*/
+    height: 0.2rem;
+    background-color: var(--secundary-color);
+    transition: all 300ms ease-in-out;
+    /*aplica uma transição suave a todas as propriedades do elemento*/
 }
 
 .menu ul li a:hover::after {
+    /*aplicado quando o cursor se move sobre o link*/
     width: 50%;
-    left:25%;
+    /*largura do elemento se expande até a metade da largura do link*/
+    left: 25%;
+    /*o elemento é deslocado para a esquerda em 25% da largura do link*/
 }
 
-.menu-content{
+.menu-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,3 +177,104 @@ transition: all 300ms ease-in-out;
     padding-bottom: 0;
 }
 
+.menu-spacing {
+    height: 6.2rem;
+}
+
+.intro-content {
+    position: relative;
+    top: -6.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: var(--gap);
+    height: 100vh;
+}
+
+.intro-text-content,
+.intro-img {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.intro-text-content h2 {
+    margin-bottom: 2rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.3;
+}
+
+.intro-img img {
+    max-width: 85%;
+    height: auto;
+    filter: drop-shadow(5px 5px 10px rgba(189, 179, 92, 0.6));
+
+}
+
+.parceiras-content {
+    max-width: 80rem;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.parceiras-content h2{
+    margin-bottom: 5rem;
+}
+
+.grid-one-content {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vh;
+    justify-content: center;
+}
+
+.grid-one-content h2 {
+    margin-bottom: 1rem;    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    counter-reset: grid-counter;
+    
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 14rem;
+    padding-bottom: 3rem;
+}
+
+.grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: 0;
+    left: 2rem;    
+    transform: rotate(5deg);
+}
+
+.grid-main-heading {
+    padding-bottom: 1rem;
+}
+
+.grid-description {
+    padding-bottom: 5rem;
+}
+
+.grid-description-marcas {
+    text-align: justify;
+    padding: 0rem 2rem 0rem 2rem;   
+}
+
+.img-logo {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 1rem;    
+}
