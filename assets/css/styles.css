@@ -85,7 +85,7 @@ p {
     background-image: url("/assets/img/background-green.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     color: var(--white-color);
     /*uso da variavel global*/
 }
@@ -449,6 +449,15 @@ footer {
 }
 
 @media (max-width: 800px) {
+    .main-bg {
+        height: 100%;        
+    }
+    
+    h2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    
     .menu {
         bottom:0;
         display:none;
@@ -525,4 +534,5 @@ footer {
     .gallery-img img{
         width: 100%;
     }
+
 }
