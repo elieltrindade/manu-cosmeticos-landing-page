@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manu Cosmeticos</title>
+    <meta name="description"
+        content="Ampla variedade de produtos das melhores marcas, como Boticário, Natura, Eudora, Avon, Jequiti e muitas outras. Com um atendimento personalizado, focado em entender e atender suas necessidades com produtos de alta qualidade, a fim de garantir que você se sinta bem consigo mesmo." />
     <link rel="stylesheet" href="assets/css/styles.css" /> <!--Link CSS-->
     <!--Link fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,22 +14,30 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <!-- 
+    Uma caixa de seleçao que se comporta como botão
+    aria label -> fornecer uma descrição acessível para o elemento;
+    rule -> especifica o papel semantico do elemento.
+-->
     <aside class="menu white-bg"> <!--O que estã criando -->
         <div class="main-content menu-content"> <!--Conteudo-->
-            <h1>
-                <a href=#>Manu<br>Cosméticos</a>
+            <h1 onclick="getElementById('close-menu').checked = false">
+                <!--JavaScript, quando o clicar sobre o titulo, retira o check, assim o menu fecha e vai para home-->
+                <a href=#home>Manu<br>Cosméticos</a>
             </h1>
             <nav>
-                <ul>
-                    <li><a href=#home>home</a></li>
-                    <li><a href=#intro>intro</a></li>
+                <ul onclick="getElementById('close-menu').checked = false">
+                    <li><a href=#intro>sobre</a></li>
                     <li><a href=#top3>top 3</a></li>
-                    <li><a href=#gallery>gallery</a></li>
-                    <li><a href=#pricing>pricing</a></li>
-                    <li><a href=#contact>contact</a></li>
+                    <li><a href=#gallery>galeria</a></li>
+                    <li><a href=#pricing>preços</a></li>
+                    <li><a href=#contact>contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -62,13 +72,7 @@
                 Qualidade e Variedade em Cada Detalhe
             </h2>
             <p>
-                Manu Cosméticos oferece uma ampla seleção de produtos das melhores marcas, como Boticário, Natura,
-                Hinode, Jequiti, Avon e Eudora. Nosso atendimento personalizado garante que você encontre exatamente o
-                que precisa, sempre com a qualidade e o preço justo que você merece. Explore nossas opções de perfumes,
-                incluindo Egeo Spicy Vibe, Ilía Deo Parfum, Empire, Eliana Cristal e muito mais, para descobrir o que há
-                de melhor no mundo dos cosméticos.
-                <br><br>
-                Além de perfumes, oferecemos uma vasta gama de produtos para cuidados com a pele, cabelo e corpo. Desde
+                Manu Cosméticos oferece uma ampla seleção de produtos para cuidados com a pele, cabelo e corpo. Desde
                 cremes hidratantes e loções corporais até tratamentos capilares e maquiagens de alta qualidade, Manu
                 Cosméticos é o seu destino completo para realçar a sua beleza natural. Nossos produtos são
                 cuidadosamente selecionados para atender às necessidades de todos os tipos de pele e estilos de vida,
@@ -154,41 +158,41 @@
                 Galeria
             </h2>
             <p class="grid-description">
-                Cosméticos mais amados
+                Perfumes mais amados
             </p>
             <div class="grid">
                 <div class="gallery-img">
-                    <img src="assets/img/lily boticario.svg"
+                    <img src="assets/img/Lily-Eau-de-Parfum-75ml-B77524_.webp"
                         alt=" Na imagem há uma mão feminina retirando a tampa do frasco Lily Eau de Parfum, o frasco é de vidro e possui uma cor dourada">
                 </div>
                 <div class="gallery-img">
-                    <img src="assets/img/lily boticario.svg"
+                    <img src="assets/img/Egeo-Des-Col-Spcy-Vibe-C-Car-90Ml-B84214_.webp"
                         alt=" Na imagem há uma mão feminina retirando a tampa do frasco Lily Eau de Parfum, o frasco é de vidro e possui uma cor dourada">
                 </div>
                 <div class="gallery-img">
-                    <img src="assets/img/lily boticario.svg"
+                    <img src="assets/img/Ilia.jpg"
                         alt=" Na imagem há uma mão feminina retirando a tampa do frasco Lily Eau de Parfum, o frasco é de vidro e possui uma cor dourada">
                 </div>
                 <div class="gallery-img">
-                    <img src="assets/img/lily boticario.svg"
+                    <img src="assets/img/Empire.png"
                         alt=" Na imagem há uma mão feminina retirando a tampa do frasco Lily Eau de Parfum, o frasco é de vidro e possui uma cor dourada">
                 </div>
                 <div class="gallery-img">
-                    <img src="assets/img/lily boticario.svg"
+                    <img src="assets/img/Eliana Cristal.png"
                         alt=" Na imagem há uma mão feminina retirando a tampa do frasco Lily Eau de Parfum, o frasco é de vidro e possui uma cor dourada">
                 </div>
                 <div class="gallery-img">
-                    <img src="assets/img/lily boticario.svg"
+                    <img src="assets/img/Floratta-Blue-Desodorante-Colonia-B25458_.webp"
                         alt=" Na imagem há uma mão feminina retirando a tampa do frasco Lily Eau de Parfum, o frasco é de vidro e possui uma cor dourada">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="white-bg section">
+    <section id="pricing" class="main-bg section">
         <div class="main-content parceiras-content">
             <h2>
-                Qualidade e Variedade em Cada Detalhe
+                Beleza Personalizada com Qualidade e Preço Justo
             </h2>
             <p>
                 Manu Cosméticos oferece uma ampla seleção de produtos das melhores marcas, como Boticário, Natura,
@@ -204,33 +208,49 @@
                     <caption>Pricing table</caption>
                     <thead>
                         <tr>
-                            <th>Title 1</th>
-                            <th>Title 2</th>
-                            <th>Title 3</th>
+                            <th>Item</th>
+                            <th>Volume</th>
+                            <th>Valor</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Content 1</td>
-                            <td>Content 2</td>
-                            <td>Content 3</td>
+                            <td>Lily Lumière Eau de Parfum</td>
+                            <td>75ml</td>
+                            <td>299,90</td>
                         </tr>
                         <tr>
-                            <td>Content 1</td>
-                            <td>Content 2</td>
-                            <td>Content 3</td>
+                            <td>Egeo Spicy Vibe Desodorante Colônia </td>
+                            <td>90ml</td>
+                            <td>144,90</td>
                         </tr>
                         <tr>
-                            <td>Content 1</td>
-                            <td>Content 2</td>
-                            <td>Content 3</td>
+                            <td>Ilía 50 ml</td>
+                            <td>50ml</td>
+                            <td>173,90</td>
+                        </tr>
+                        <tr>
+                            <td>Perfume Empire Hinode</td>
+                            <td>100ml</td>
+                            <td>130,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Eliana Cristal Desodorante Colônia Feminina</td>
+                            <td>25ml</td>
+                            <td>21,76</td>
+                        </tr>
+                        <tr>
+                            <td>Floratta Blue Desodorante Colônia</td>
+                            <td>75ml</td>
+                            <td>149,90</td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td></td>
                             <td></td>
-                            <td>Content 3</td>
+                            <td></td>
                         </tr>
                     </tfoot>
                 </table>
@@ -238,23 +258,21 @@
         </div>
     </section>
 
-    <section id='contact' class="intro main-bg section">
+    <section id='contact' class="intro white-bg section">
         <div class="main-content intro-content">
             <div class="intro-text-content">
                 <h2>
-                    Beleza e Qualidade ao Seu Alcance
+                    Entre em Contato e Descubra a Beleza que Há em Você!
                 </h2>
                 <p>
-                    Ampla variedade de produtos das melhores marcas, como
-                    Boticário, Natura, Eudora, Avon, Jequiti e muitas outras. Com um atendimento personalizado, focado
-                    em
-                    entender e atender suas necessidades com produtos de alta qualidade, a fim de garantir que você se
-                    sinta bem consigo mesmo.
+                    Na Manu Cosméticos, acreditamos que cada pessoa é única e merece produtos que valorizem sua beleza
+                    natural. Nossa equipe está pronta para te ajudar a encontrar os itens perfeitos para sua rotina de
+                    cuidados pessoais.
                 </p>
             </div>
-            <div class="contact">
-                <img src="assets/img/Manu cosmeticos.png"
-                    alt="A imagem mostra uma coleção de cosméticos, incluindo um creme, um batom vermelho, pincéis de maquiagem, e possivelmente um frasco de perfume. Tudo está disposto de maneira elegante e organizada.">
+            <div class="intro-img">
+                <img src="assets/img/manu-cosmeticos.jpeg"
+                    alt="A imagem mostra uma coleção de cosméticos, incluindo um creme, um batom vermelho, e um frasco de perfume. Tudo está disposto de maneira elegante e organizada.">
             </div>
 
             <div class="contact-form">
@@ -284,9 +302,17 @@
             </div>
         </div>
     </section>
-    <footer id="footer" class="white-bg">
-        <p><a href="">Feito com carinho <span class="harth">❤</span> por Eliel</p>
+    <footer id="footer" class="gray-bg">
+        <div class=" footer-content">
+            <p>2024 - Pesquisar. Todos os direitos reservados</p>
+            <p>Feito com carinho <span class="harth">❤</span> por <a href="https://github.com/elieltrindade"
+                    target="blank">Eliel Trindade</a></p>
+        </div>
     </footer>
+
+    <a class="back-to-top" href="#">
+        <span class="fa-solid fa-arrow-up"></span>
+    </a>
 </body>
 
 </html>
