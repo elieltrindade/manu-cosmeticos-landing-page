@@ -6,3 +6,19 @@ fetch('/.netlify/functions/get-email')
     document.getElementById('contact-form').action = `https://formsubmit.co/${data.email}`;
   })
   .catch(error => console.error('Erro ao obter o e-mail:', error));
+
+
+  //validaçao email
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    const emailField = document.getElementById('email');
+    const email = emailField.value;
+
+    // Expressão regular simples para validar e-mail
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        alert('Por favor, insira um endereço de e-mail válido.');
+        event.preventDefault();  // Impede o envio do formulário
+    }
+});
