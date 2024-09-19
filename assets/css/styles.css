@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     text-transform: uppercase;
 }
 
@@ -197,7 +197,6 @@ body .full-width {
 
 .intro-content {
     position: relative;
-    /*top: -6.2rem;*/
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     align-items: center;
@@ -217,9 +216,7 @@ body .full-width {
     margin-bottom: 2rem;
 }
 
-.intro-text-content h2 {
-    font-size: 3.5rem;
-}
+
 
 .intro-text-content h2 {
     margin-bottom: 2rem;
@@ -459,10 +456,11 @@ footer {
 
     h1 {
         font-size: 4rem;
+        width: 100%;
     }
     
     h2 {
-        font-size: 2rem;
+        font-size: 3.5rem;
         text-transform: uppercase;
     }
     
