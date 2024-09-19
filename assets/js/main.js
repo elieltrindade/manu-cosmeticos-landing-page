@@ -1,5 +1,5 @@
 // Faz a requisição para a função serverless que retorna o e-mail de envio
-fetch('/.netlify/functions/get-email')
+fetch('https://manucosmeticos.netlify.app/.netlify/functions/get-email')
 .then(response => response.json())
 .then(data => {
     //Define o action do formulário com o e-mail retornado
