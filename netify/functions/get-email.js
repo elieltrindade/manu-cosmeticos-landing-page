@@ -7,7 +7,11 @@ exports.handler = async function (event, context) {
 
     //Retorna o e-mail como resposta JSON
     return {
-        statusCode,
+        statusCode: 200,    // Set status code to indicate success
+        headers: {
+            "Access-Control-Allow-Origin": "*", // Allow requests from any origin (adjust as needed)
+            "Content-Type": "application/json"
+          },
         body: JSON.stringify({ email: formEmail })
     };
 };
