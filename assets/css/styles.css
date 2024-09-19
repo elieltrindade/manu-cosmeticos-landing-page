@@ -6,7 +6,7 @@
     --light-gray-color: #D3D3D3;
     --soft-beige-color: #F5F5DC;
     --gray-color: #333333;
-    --gap: 3rem;
+    --gap: 2rem;
     /*espaçamento entre cada elemento e não no container */
 
 }
@@ -50,24 +50,24 @@ h1 {
 }
 
 h2 {
-    font-size: 5.5rem;
+    font-size: 5rem;
     text-transform: uppercase;
 }
 
 h3 {
-    font-size: 5rem;
-}
-
-h4 {
-    font-size: 4.5rem;
-}
-
-h5 {
     font-size: 4rem;
 }
 
-h6 {
+h4 {
     font-size: 3.5rem;
+}
+
+h5 {
+    font-size: 3rem;
+}
+
+h6 {
+    font-size: 2.5rem;
 }
 
 a {
@@ -182,11 +182,11 @@ section {
     padding-bottom: 0;
 }
 
-.menu-spacing {
+.menu-offset {
     min-height: 6.2rem;
 }
 
-.close-menu {
+.menu-toggle {
     display: none;
 }
 
@@ -210,6 +210,15 @@ body .full-width {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
+    gap: 1rem;
+}
+
+.intro-text-content h1 {
+    margin-bottom: 2rem;
+}
+
+.intro-text-content h2 {
+    font-size: 3.5rem;
 }
 
 .intro-text-content h2 {
@@ -224,7 +233,7 @@ body .full-width {
     filter: drop-shadow(0 0 10px rgba(253, 253, 253, 0.5));
 }
 
-.parceiras-content {
+.partner-content {
     max-width: 80rem;
     display: flex;
     /*flex-flow: column wrap;*/
@@ -235,18 +244,18 @@ body .full-width {
     text-align: center;
 }
 
-.parceiras-content h2{
+.partner-content h2{
     margin-bottom: 5rem;
 }
 
-.grid-one-content {
+.grid-content {
     display: flex;
     flex-flow: column wrap;
     min-height: 100vh;
     justify-content: center;
 }
 
-.grid-one-content h2 {
+.grid-content h2 {
     margin-bottom: 1rem;    
 }
 
@@ -452,6 +461,10 @@ footer {
     .main-bg {
         height: 100%;        
     }
+
+    h1 {
+        font-size: 4rem;
+    }
     
     h2 {
         font-size: 2rem;
@@ -463,7 +476,7 @@ footer {
         display:none;
     }
 
-    .menu-spacing {
+    .menu-offset {
         display: none;
     }
 
@@ -487,7 +500,7 @@ footer {
         margin-bottom: 3rem;
     }
 
-    .close-menu-label::after {
+    .menu-toggle-label::after {
         content:'≡';
         position: fixed;
         z-index: 2;
@@ -507,11 +520,11 @@ footer {
     }
 
     /* × */
-    .close-menu:checked~.menu {     /* regra de seletor -> Quando o checkbox estiver checked o display do menu se torna block*/
+    .menu-toggle:checked~.menu {     /* regra de seletor -> Quando o checkbox estiver checked o display do menu se torna block*/
         display: block;
     }
     /*regra de seletor -> quando checkbox estiver checado o label ira trocar o conteudo*/
-    .close-menu:checked~.close-menu-label::after {
+    .menu-toggle:checked~.menu-toggle-label::after {
         content:"×";
     }    
 

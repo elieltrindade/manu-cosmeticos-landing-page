@@ -18,8 +18,8 @@
 </head>
 
 <body>
-    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
-    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <input id="menu-toggle" class="menu-toggle" type="checkbox" aria-label="Menu Toggle" role="button">
+    <label class="menu-toggle-label" for="menu-toggle" title="menu toglle"></label>
     <!-- 
     Uma caixa de seleçao que se comporta como botão
     aria label -> fornecer uma descrição acessível para o elemento;
@@ -27,12 +27,12 @@
 -->
     <aside class="menu white-bg"> <!--O que estã criando -->
         <div class="main-content menu-content"> <!--Conteudo-->
-            <h1 onclick="getElementById('close-menu').checked = false">
+            <h1 onclick="getElementById('menu-toggle').checked = false">
                 <!--JavaScript, quando o clicar sobre o titulo, retira o check, assim o menu fecha e vai para home-->
                 <a href=#home>Manu<br>Cosméticos</a>
             </h1>
             <nav>
-                <ul onclick="getElementById('close-menu').checked = false">
+                <ul onclick="getElementById('menu-toggle').checked = false">
                     <li><a href=#intro>sobre</a></li>
                     <li><a href=#top3>top 3</a></li>
                     <li><a href=#gallery>galeria</a></li>
@@ -43,11 +43,12 @@
         </div>
     </aside>
 
-    <div class="menu-spacing"> </div>
+    <div class=".menu-offset"> </div>
 
     <section id='home' class="intro main-bg section">
         <div class="main-content intro-content">
             <div class="intro-text-content">
+                <h1>Manu Cosméticos</h1>
                 <h2>
                     Beleza e Qualidade ao Seu Alcance
                 </h2>
@@ -67,7 +68,7 @@
     </section>
 
     <section id="intro" class="white-bg section">
-        <div class="main-content parceiras-content">
+        <div class="main-content partner-content">
             <h2>
                 Qualidade e Variedade em Cada Detalhe
             </h2>
@@ -87,7 +88,7 @@
         </div>
     </section>
     <section id="top3" class="main-bg section">
-        <div class=" main-content grid-one-content">
+        <div class=" main-content grid-content">
 
             <h2 class="grid-main-heading">
                 Top 3 marcas
@@ -152,7 +153,7 @@
     </section>
 
     <section id="gallery" class="grid-one white-bg section">
-        <div class=" main-content grid-one-content">
+        <div class=" main-content grid-content">
 
             <h2 class="grid-main-heading">
                 Galeria
@@ -190,7 +191,7 @@
     </section>
 
     <section id="pricing" class="main-bg section">
-        <div class="main-content parceiras-content">
+        <div class="main-content partner-content">
             <h2>
                 Beleza Personalizada com Qualidade e Preço Justo
             </h2>
