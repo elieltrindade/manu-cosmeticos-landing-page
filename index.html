@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manu Cosmeticos</title>
     <meta name="description"
-        content="Ampla variedade de produtos das melhores marcas, como Boticário, Natura, Eudora, Avon, Jequiti e muitas outras. Com um atendimento personalizado, focado em entender e atender suas necessidades com produtos de alta qualidade, a fim de garantir que você se sinta bem consigo mesmo." />
-    <link rel="stylesheet" href="assets/css/styles.css" /> <!--Link CSS-->
+        content="Ampla variedade de produtos das melhores marcas, como Boticário, Natura, Eudora, Avon, Jequiti e muitas outras. Com um atendimento personalizado, focado em entender e atender suas necessidades com produtos de alta qualidade, a fim de garantir que você se sinta bem consigo mesmo.">
+    <link rel="stylesheet" href="assets/css/styles.css"> <!--Link CSS-->
     <!--Link fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,8 @@
 </head>
 
 <body>
-    <input id="menu-toggle" class="menu-toggle" type="checkbox" aria-label="Menu Toggle" role="button">
+    <input id="menu-toggle" class="menu-toggle" type="checkbox" aria-label="Menu Toggle" role="button"
+        aria-pressed="true">
     <label class="menu-toggle-label" for="menu-toggle" title="menu toglle"></label>
     <!-- 
     Uma caixa de seleçao que se comporta como botão
@@ -61,7 +62,7 @@
                 </p>
             </div>
             <div class="intro-img">
-                <img src="assets/img/Manu cosmeticos.png"
+                <img src="assets/img/manu-cosmeticos.png"
                     alt="A imagem mostra uma coleção de cosméticos, incluindo um creme, um batom vermelho, pincéis de maquiagem, e possivelmente um frasco de perfume. Tudo está disposto de maneira elegante e organizada.">
             </div>
         </div>
@@ -179,7 +180,7 @@
                         alt=" Na imagem há uma mão feminina retirando a tampa do frasco Lily Eau de Parfum, o frasco é de vidro e possui uma cor dourada">
                 </div>
                 <div class="gallery-img">
-                    <img src="assets/img/Eliana Cristal.png"
+                    <img src="assets/img/eliana-cristal.png"
                         alt=" Na imagem há uma mão feminina retirando a tampa do frasco Lily Eau de Parfum, o frasco é de vidro e possui uma cor dourada">
                 </div>
                 <div class="gallery-img">
@@ -276,44 +277,52 @@
                     alt="A imagem mostra uma coleção de cosméticos, incluindo um creme, um batom vermelho, e um frasco de perfume. Tudo está disposto de maneira elegante e organizada.">
             </div>
 
-            <div class="contact-form">
+            <form class="contact-form" method="POST">
+
+                <input type="hidden" name="_next" value="https://manucosmeticos.netlify.app/thankyou.html">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_subject" value="Nova mensagem de contato Manu Cosméticos!">
+
+
                 <fieldset class="form-grid">
                     <legend>Contact me</legend>
-
                     <div class="form-group">
-                        <label for="primeiro-nome">Primeiro nome</label>
-                        <input type="text" name="first-name" id="first-name" placeholder="Insira seu primeiro nome">
+                        <label for="first-name">Primeiro nome</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Insira seu primeiro nome"
+                            required>
                     </div>
                     <div class="form-group">
-                        <label for="sobrenome">Sobrenome</label>
-                        <input type="text" name="last-name" id="last-name" placeholder="Insira seu sobrenome">
+                        <label for="last-name">Sobrenome</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Insira seu sobrenome" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" placeholder="Insira seu e-mail">
+                        <input type="email" name="email" id="email" placeholder="email@email.com.br" required>
                     </div>
                     <div class="form-group full-width">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Digite sua mensagem "></textarea>
+                        <label for="message">Mensagem</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Digite sua mensagem"
+                            required></textarea>
                     </div>
                     <div class="form-group full-width">
                         <button type="submit">Send message</button>
                     </div>
                 </fieldset>
-            </div>
+            </form>
         </div>
     </section>
     <footer id="footer" class="gray-bg">
         <div class=" footer-content">
             <p>2024 - Pesquisar. Todos os direitos reservados</p>
-            <p>Feito com carinho <span class="harth">❤</span> por <a href="https://github.com/elieltrindade"
-                    target="blank">Eliel</a></p>
+            <p>Desenvolvido por por <a href="www.linkedin.com/in/elieltrindade" target="blank">Eliel Trindade</a></p>
         </div>
     </footer>
 
     <a class="back-to-top" href="#">
         <span class="fa-solid fa-arrow-up"></span>
     </a>
+    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

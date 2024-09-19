@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--soft-beige-color);
+    color: var(--primary-color);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+a {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+a:hover {
+    background-color: var(--secundary-color);
+}
